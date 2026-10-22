@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza.Exe | Entrar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/comum.js" defer></script>
+    <script src="js/login.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="index.html">🍕 Pizza.Exe</a>
+        <nav>
+            <a href="index.html">Início</a><a href="sistema.html">Cardápio</a>
+            <a href="eventos.html">Eventos</a><a href="pedidos.html">Meus pedidos</a>
+        </nav>
+    </header>
 
+    <main class="pagina-formulario">
+        <section class="painel-formulario">
+            <div class="titulo-secao">
+                <span class="etiqueta">ÁREA DO CLIENTE</span>
+                <h1>Que bom ter você aqui!</h1>
+                <p>Entre na sua conta ou faça seu cadastro para continuar.</p>
+            </div>
+
+            <div class="abas">
+                <button type="button" id="abaLogin" class="aba ativa">Entrar</button>
+                <button type="button" id="abaCadastro" class="aba">Criar conta</button>
+            </div>
+
+            <!-- Formulário de login -->
+            <form id="formLogin">
+                <label for="emailLogin">E-mail</label>
+                <input type="email" id="emailLogin" required placeholder="voce@email.com">
+                <label for="senhaLogin">Senha</label>
+                <input type="password" id="senhaLogin" required minlength="4" placeholder="Digite sua senha">
+                <button class="botao largura-total" type="submit">Entrar</button>
+            </form>
+
+            <!-- Formulário de cadastro, escondido até selecionar a aba -->
+            <form id="formCadastro" class="escondido">
+                <label for="nomeCadastro">Nome completo</label>
+                <input type="text" id="nomeCadastro" required placeholder="Seu nome">
+                <label for="emailCadastro">E-mail</label>
+                <input type="email" id="emailCadastro" required placeholder="voce@email.com">
+                <label for="senhaCadastro">Crie uma senha</label>
+                <input type="password" id="senhaCadastro" required minlength="4" placeholder="Mínimo de 4 caracteres">
+                <button class="botao largura-total" type="submit">Criar conta</button>
+            </form>
+            <p id="mensagemLogin" class="mensagem" aria-live="polite"></p>
+            <p class="aviso">Demonstração escolar: os dados ficam apenas neste navegador. Não use uma senha real.</p>
+        </section>
+    </main>
+    <footer><p>© 2026 Pizza.Exe </p></footer>
+</body>
+</html>
