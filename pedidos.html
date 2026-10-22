@@ -1,0 +1,57 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza.Exe | Meus pedidos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/comum.js" defer></script>
+    <script src="js/pedidos.js" defer></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="index.html">🍕 Pizza.Exe</a>
+        <nav>
+            <a href="index.html">Início</a><a href="sistema.html">Cardápio</a>
+            <a href="eventos.html">Eventos</a><a class="ativo" href="pedidos.html">Meus pedidos</a>
+            <a class="botao botao-pequeno" href="login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="titulo-pagina">
+            <span class="etiqueta">TUDO EM UM SÓ LUGAR</span>
+            <h1>Meus pedidos</h1>
+            <p>Confira seu pedido atual, finalize a demonstração e consulte o histórico salvo neste navegador.</p>
+        </section>
+
+        <section class="painel-formulario">
+            <h2>Finalizar pedido</h2>
+            <div id="resumoAtual" class="resumo-pedido">
+                <p class="texto-suave">Você ainda não tem itens para finalizar. Acesse o cardápio para escolher suas pizzas.</p>
+            </div>
+            <form id="formFinalizar" class="escondido">
+                <label for="endereco">Endereço de entrega</label>
+                <input id="endereco" required placeholder="Rua, número, bairro e cidade">
+                <label for="pagamento">Forma de pagamento</label>
+                <select id="pagamento" required>
+                    <option value="">Selecione</option><option>Pix (demonstrativo)</option><option>Cartão na entrega</option><option>Dinheiro na entrega</option>
+                </select>
+                <button class="botao" type="submit">Confirmar pedido</button>
+            </form>
+            <p id="mensagemPedido" class="mensagem" aria-live="polite"></p>
+        </section>
+
+        <section class="secao">
+            <div class="titulo-secao alinhado-esquerda"><h2>Histórico de pedidos</h2><p>Pedidos confirmados neste navegador.</p></div>
+            <div id="historicoPedidos" class="grade grade-2"></div>
+        </section>
+
+        <section class="secao">
+            <div class="titulo-secao alinhado-esquerda"><h2>Minhas solicitações de eventos</h2></div>
+            <div id="historicoEventos" class="grade grade-2"></div>
+        </section>
+    </main>
+    <footer><p>© 2026 Pizza.Exe</p></footer>
+</body>
+</html>
