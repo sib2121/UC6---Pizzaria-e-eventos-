@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
 
    steps:
-    -name: Clone
-    uses: actions/checkout@v4
+    - name: Clone
+      uses: actions/checkout@v4
