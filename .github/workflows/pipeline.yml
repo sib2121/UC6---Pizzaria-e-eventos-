@@ -1,7 +1,7 @@
 name: pipeline
 
 on:
-  push
+  push:
 
 jobs:
   teste:
