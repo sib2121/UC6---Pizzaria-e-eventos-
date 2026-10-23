@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza.Exe | Cardápio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="js/comum.js" defer></script>
     <script src="js/sistema.js" defer></script>
 </head>
+
 <body>
     <header class="cabecalho">
         <a class="logo" href="index.html">🍕 Pizza.Exe</a>
+
         <nav>
-            <a href="index.html">Início</a><a class="ativo" href="sistema.html">Cardápio</a>
-            <a href="eventos.html">Eventos</a><a href="pedidos.html">Meus pedidos</a>
+            <a href="index.html">Início</a>
+            <a class="ativo" href="sistema.html">Cardápio</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="pedidos.html">Meus pedidos</a>
             <a class="botao botao-pequeno" href="login.html">Entrar</a>
         </nav>
     </header>
@@ -28,23 +33,50 @@
         <div class="layout-cardapio">
             <section>
                 <div id="listaPizzas" class="grade grade-2">
-                    <!-- Os produtos são criados pelo JavaScript -->
+                    <!-- As pizzas e suas imagens são criadas pelo JavaScript -->
                 </div>
             </section>
 
+            <!-- Carrinho de compras -->
             <aside class="carrinho cartao">
                 <h2>🛒 Seu carrinho</h2>
-                <div id="itensCarrinho"><p class="texto-suave">Seu carrinho está vazio.</p></div>
-                <div class="linha-total"><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div>
-                <div class="linha-total"><span>Entrega</span><strong id="entrega">R$ 5,00</strong></div>
-                <div class="linha-total total"><span>Total</span><strong id="total">R$ 5,00</strong></div>
-                <button id="limparCarrinho" class="botao botao-contorno largura-total" type="button">Limpar carrinho</button>
-                <button id="finalizarPedido" class="botao largura-total" type="button">Continuar para confirmação</button>
+
+                <div id="itensCarrinho">
+                    <p class="texto-suave">Seu carrinho está vazio.</p>
+                </div>
+
+                <div class="linha-total">
+                    <span>Subtotal</span>
+                    <strong id="subtotal">R$ 0,00</strong>
+                </div>
+
+                <div class="linha-total">
+                    <span>Entrega</span>
+                    <strong id="entrega">R$ 5,00</strong>
+                </div>
+
+                <div class="linha-total total">
+                    <span>Total</span>
+                    <strong id="total">R$ 5,00</strong>
+                </div>
+
+                <button id="limparCarrinho" class="botao botao-contorno largura-total" type="button">
+                    Limpar carrinho
+                </button>
+
+                <button id="finalizarPedido" class="botao largura-total" type="button">
+                    Continuar para confirmação
+                </button>
+
                 <p class="aviso">A entrega de R$ 5,00 é demonstrativa.</p>
                 <p id="mensagemCarrinho" class="mensagem" aria-live="polite"></p>
             </aside>
         </div>
     </main>
-    <footer><p>© 2026 Pizza.Exe</p></footer>
+
+    <footer>
+        <p>© 2026 Pizza.Exe</p>
+    </footer>
 </body>
+
 </html>

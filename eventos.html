@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza.Exe | Eventos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="js/comum.js" defer></script>
     <script src="js/eventos.js" defer></script>
 </head>
+
 <body>
     <header class="cabecalho">
         <a class="logo" href="index.html">🍕 Pizza.Exe</a>
+
         <nav>
-            <a href="index.html">Início</a><a href="sistema.html">Cardápio</a>
-            <a class="ativo" href="eventos.html">Eventos</a><a href="pedidos.html">Meus pedidos</a>
+            <a href="index.html">Início</a>
+            <a href="sistema.html">Cardápio</a>
+            <a class="ativo" href="eventos.html">Eventos</a>
+            <a href="pedidos.html">Meus pedidos</a>
             <a class="botao botao-pequeno" href="login.html">Entrar</a>
         </nav>
     </header>
@@ -25,35 +30,87 @@
             <p>Envie os detalhes da sua comemoração. A solicitação será registrada nesta demonstração.</p>
         </section>
 
+        <!-- Imagem do ambiente da pizzaria -->
+        <img src="imagens/ambiente.jpg" alt="Ambiente aconchegante da pizzaria para eventos" class="imagem-evento">
+
+        <!-- Tipos de eventos -->
         <section class="grade grade-3 tipos-evento">
-            <article class="cartao"><div class="icone">🎂</div><h3>Aniversários</h3><p>Uma comemoração gostosa com amigos e família.</p></article>
-            <article class="cartao"><div class="icone">🥂</div><h3>Confraternizações</h3><p>Reúna colegas e celebre grandes momentos.</p></article>
-            <article class="cartao"><div class="icone">👨‍👩‍👧‍👦</div><h3>Encontros especiais</h3><p>Um espaço acolhedor para estar com quem importa.</p></article>
+            <article class="cartao">
+                <div class="icone">🎂</div>
+                <h3>Aniversários</h3>
+                <p>Uma comemoração gostosa com amigos e família.</p>
+            </article>
+
+            <article class="cartao">
+                <div class="icone">🥂</div>
+                <h3>Confraternizações</h3>
+                <p>Reúna colegas e celebre grandes momentos.</p>
+            </article>
+
+            <article class="cartao">
+                <div class="icone">👨‍👩‍👧‍👦</div>
+                <h3>Encontros especiais</h3>
+                <p>Um espaço acolhedor para estar com quem importa.</p>
+            </article>
         </section>
 
+        <!-- Formulário de reserva -->
         <section class="painel-formulario formulario-evento">
             <h2>Solicitar uma reserva</h2>
+
             <form id="formEvento">
                 <div class="grade grade-2">
-                    <div><label for="nomeEvento">Seu nome</label><input id="nomeEvento" required placeholder="Nome completo"></div>
-                    <div><label for="contatoEvento">E-mail ou telefone</label><input id="contatoEvento" required placeholder="Como podemos retornar?"></div>
-                    <div><label for="tipoEvento">Tipo de evento</label>
+                    <div>
+                        <label for="nomeEvento">Seu nome</label>
+                        <input id="nomeEvento" required placeholder="Nome completo">
+                    </div>
+
+                    <div>
+                        <label for="contatoEvento">E-mail ou telefone</label>
+                        <input id="contatoEvento" required placeholder="Como podemos retornar?">
+                    </div>
+
+                    <div>
+                        <label for="tipoEvento">Tipo de evento</label>
                         <select id="tipoEvento" required>
-                            <option value="">Selecione</option><option>Aniversário</option><option>Confraternização</option><option>Encontro familiar</option><option>Outro</option>
+                            <option value="">Selecione</option>
+                            <option>Aniversário</option>
+                            <option>Confraternização</option>
+                            <option>Encontro familiar</option>
+                            <option>Outro</option>
                         </select>
                     </div>
-                    <div><label for="dataEvento">Data desejada</label><input type="date" id="dataEvento" required></div>
-                    <div><label for="horarioEvento">Horário desejado</label><input type="time" id="horarioEvento" required></div>
-                    <div><label for="convidadosEvento">Quantidade de convidados</label><input type="number" id="convidadosEvento" min="1" max="300" required placeholder="Ex.: 25"></div>
+
+                    <div>
+                        <label for="dataEvento">Data desejada</label>
+                        <input type="date" id="dataEvento" required>
+                    </div>
+
+                    <div>
+                        <label for="horarioEvento">Horário desejado</label>
+                        <input type="time" id="horarioEvento" required>
+                    </div>
+
+                    <div>
+                        <label for="convidadosEvento">Quantidade de convidados</label>
+                        <input type="number" id="convidadosEvento" min="1" max="300" required placeholder="Ex.: 25">
+                    </div>
                 </div>
+
                 <label for="detalhesEvento">Detalhes adicionais</label>
-                <textarea id="detalhesEvento" rows="4" placeholder="Conte um pouco sobre sua ideia (opcional)"></textarea>
+                <textarea id="detalhesEvento" rows="4"
+                    placeholder="Conte um pouco sobre sua ideia (opcional)"></textarea>
+
                 <button class="botao" type="submit">Enviar solicitação</button>
             </form>
+
             <p id="mensagemEvento" class="mensagem" aria-live="polite"></p>
         </section>
     </main>
-    <footer><p>© 2026 Pizza.Exe</p></footer>
-</body>
-</html>
 
+    <footer>
+        <p>© 2026 Pizza.Exe</p>
+    </footer>
+</body>
+
+</html>
